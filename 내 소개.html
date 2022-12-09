@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GLITCH</title>
+		<link rel="stylesheet" href="./style.css" />
+        <style>
+        @font-face {
+            font-family: 'MaplestoryOTFBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+    font-family: 'Bazzi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        body {
+            font-family: "MaplestoryOTFBold", sans-serif;
+            background: linear-gradient(#16091b 50%, #250f2d 50%);
+            background-size: 100% 5px;
+        }
+        
+        .wrap {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .text {
+            width: 100%;
+            font-size: 80px;
+            position: relative;
+        }
+        .glitch {
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .text p {
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+            margin: 0;
+            mix-blend-mode: overlay;
+            animation: glitch1 2.5s infinite;
+        }
+        
+        .text p:nth-child(2) {
+            color: #4cfffe;
+            animation: glitch2 2.5s infinite;
+        }
+        
+        .text p:nth-child(3) {
+            color: #9000ff;
+            animation: glitch3 2.5s infinite;
+        }
+        .name {
+            font-family:'Bazzi';
+            text-align: center;
+            color:khaki;
+            font-size: 35px;
+        }
+        /*Keyframes*/
+        @keyframes glitch1 {
+            0% {
+                transform: none;
+                opacity: 1;
+            }
+            7% {
+                transform: skew(-0.5deg, -0.9deg);
+                opacity: 0.75;
+            }
+            10% {
+                transform: none;
+                opacity: 1;
+            }
+            27% {
+                transform: none;
+                opacity: 1;
+            }
+            30% {
+                transform: skew(0.8deg, -0.1deg);
+                opacity: 0.75;
+            }
+            35% {
+                transform: none;
+                opacity: 1;
+            }
+            52% {
+                transform: none;
+                opacity: 1;
+            }
+            55% {
+                transform: skew(-1deg, 0.2deg);
+                opacity: 0.75;
+            }
+            50% {
+                transform: none;
+                opacity: 1;
+            }
+            72% {
+                transform: none;
+                opacity: 1;
+            }
+            75% {
+                transform: skew(0.4deg, 1deg);
+                opacity: 0.75;
+            }
+            80% {
+                transform: none;
+                opacity: 1;
+            }
+            100% {
+                transform: none;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes glitch2 {
+            0% {
+                transform: none;
+                opacity: 0.25;
+            }
+            7% {
+                transform: translate(-2px, -3px);
+                opacity: 0.5;
+            }
+            10% {
+                transform: none;
+                opacity: 0.25;
+            }
+            27% {
+                transform: none;
+                opacity: 0.25;
+            }
+            30% {
+                transform: translate(-5px, -2px);
+                opacity: 0.5;
+            }
+            35% {
+                transform: none;
+                opacity: 0.25;
+            }
+            52% {
+                transform: none;
+                opacity: 0.25;
+            }
+            55% {
+                transform: translate(-5px, -1px) rotate(-360deg);
+                opacity: 0.5;
+                font-size: 1.5em;
+                color: red;
+            }
+            50% {
+                transform: none;
+                opacity: 0.25;
+            }
+            72% {
+                transform: none;
+                opacity: 0.25;
+            }
+            75% {
+                transform: translate(-2px, -6px);
+                opacity: 0.5;
+            }
+            80% {
+                transform: none;
+                opacity: 0.25;
+            }
+            100% {
+                transform: none;
+                opacity: 0.25;
+            }
+        }
+        
+        @keyframes glitch3 {
+            0% {
+                transform: none;
+                opacity: 0.25;
+            }
+            7% {
+                transform: translate(2px, 3px);
+                opacity: 0.5;
+            }
+            10% {
+                transform: none;
+                opacity: 0.25;
+            }
+            27% {
+                transform: none;
+                opacity: 0.25;
+            }
+            30% {
+                transform: translate(5px, 2px);
+                opacity: 0.5;
+            }
+            35% {
+                transform: none;
+                opacity: 0.25;
+            }
+            52% {
+                transform: none;
+                opacity: 0.25;
+            }
+            55% {
+                transform: translate(5px, 1px);
+                opacity: 0.5;
+            }
+            50% {
+                transform: none;
+                opacity: 0.25;
+            }
+            72% {
+                transform: none;
+                opacity: 0.25;
+            }
+            75% {
+                transform: translate(2px, 6px);
+                opacity: 0.5;
+            }
+            80% {
+                transform: none;
+                opacity: 0.25;
+            }
+            100% {
+                transform: none;
+                opacity: 0.25;
+            }
+        }
+        
+        .circle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            margin: auto;
+            width: 100vh;
+            height: 100vh;
+            border-radius: 50%;
+            mix-blend-mode: overlay;
+            opacity: 0.1;
+            animation: circleAni 2s alternate infinite;
+        }
+        .circle2 {
+            width: 60vh;
+            height: 60vh;
+            animation: circleAni 1.75s alternate infinite;
+        }
+        .circle3 {
+            width: 40vh;
+            height: 40vh;
+            animation: circleAni 1.25s alternate infinite;
+        }
+        @keyframes circleAni {
+            from {
+                background: #873cff;
+                transform: scale(0);
+            }
+            to {
+                background: #3cf5ff;
+                transform: scale(2);
+            }
+        }
+        </style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="text">
+				<p>노력을 멈추지 않는 한 <br />절대 패배자가 될 수 없다</p>
+				<p class="glitch">노력을 멈추지 않는 한 <br />절대 패배자가 될 수 없다</p>
+				<p class="glitch">노력을 멈추지 않는 한  <br />절대 패배자가 될 수 없다</p>
+			</div>
+
+			<p class="name">Ji Won Kim</p>
+
+			<div class="circle"></div>
+			<div class="circle circle2"></div>
+			<div class="circle circle3"></div>
+		</div>
+	</body>
+</html>
